@@ -105,10 +105,10 @@ Frontend sẽ chạy trên http://localhost:3000.
 
 4. Cấu hình MongoDB
 
-Nếu sử dụng MongoDB Atlas, chuỗi kết nối đã được cấu hình trong backend/db/connection.js:mongodb+srv://photo-sharing:***REMOVED***@cluster0.jwieqem.mongodb.net/PhotoApp?retryWrites=true&w=majority&appName=Cluster0
+Nếu sử dụng MongoDB Atlas, copy backend/.env.example thành backend/.env rồi đặt MONGODB_URI theo dạng:mongodb+srv://<username>:<password>@<cluster>.mongodb.net/PhotoApp?retryWrites=true&w=majority
 
 
-Nếu sử dụng MongoDB cục bộ, cập nhật chuỗi kết nối trong backend/db/connection.js thành:mongodb://localhost:27017/PhotoApp
+Nếu sử dụng MongoDB cục bộ, đặt MONGODB_URI trong backend/.env thành:mongodb://localhost:27017/PhotoApp
 
 
 

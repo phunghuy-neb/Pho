@@ -1,11 +1,12 @@
 // Kết nối MongoDB
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', true); // Thêm dòng này
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb+srv://photo-sharing:***REMOVED***@cluster0.jwieqem.mongodb.net/PhotoApp?retryWrites=true&w=majority&appName=Cluster0', {
+    await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
